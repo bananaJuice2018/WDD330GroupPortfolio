@@ -11,7 +11,7 @@
 <body>
   <section>
     <h2> Calculator </h2>
-    <input type="text" id="input">
+    <input type="number" id="input">
     <button type="button" onclick="calculate()">Calculate</button>
     <div id="output"></div>
   </section>
@@ -19,8 +19,8 @@
 
   <section>
     <h2> Adding two numbers </h2>
-    <input type="text" id="input">
-    <input type="text" id="input2">
+    <input type="number" id="input1">
+    <input type="number" id="input2">
     <button type="button" onclick="sum()">+</button>
     <div id="output2"></div>
   </section>
@@ -63,13 +63,13 @@
   }
 
   function sum() {
-    let input = parseInt(document.querySelector('#input').value);
+    let input1 = parseInt(document.querySelector('#input1').value);
     let input2 = parseInt(document.querySelector('#input2').value);
     let output;
-    output = input + input2;
+    output = input1 + input2;
 
     // Check Null, if user enters a NULL value, return the text message.
-    if (!isNaN(input) && !isNaN(input2)) {
+    if (!isNaN(input1) && !isNaN(input2)) {
       document.querySelector('#output2').textContent = `The sum of both values is: ${output}`;
     }else if(isNaN(input) || isNaN(input2)) {
       document.querySelector('#output2').textContent = `Please enter a number.`;
